@@ -188,7 +188,6 @@ public class HttpRequest {
                 prestr.append(key).append("=").append(value).append("&");
             }
         }
-        System.out.println(prestr.toString());
         return prestr.toString();
     }
 
