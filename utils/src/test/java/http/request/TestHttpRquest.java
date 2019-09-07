@@ -14,9 +14,9 @@ public class TestHttpRquest {
     public static final HashMap<String,String> paramterMap = new HashMap<>();
 
     static{
-        paramterMap.put("name","陈建聪");
-        paramterMap.put("tel","18201826046");
-        paramterMap.put("sn","350303199409050318");
+        paramterMap.put("name","邱婷婷");
+        paramterMap.put("tel","18818208440");
+        paramterMap.put("sn","350321199311253347");
     }
 
     @Test
