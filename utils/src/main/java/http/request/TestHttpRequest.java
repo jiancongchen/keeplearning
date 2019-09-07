@@ -46,14 +46,14 @@ public class TestHttpRequest {
 
 
     public void reservationApply(String URL,HashMap<String,String> personInfo) {
-        for(int i = 0; i < 3; i++){
-        String result = HttpRequest.doPostForm(URL,personInfo);
-        JSONObject jsonObject = JSONObject.parseObject(result);
-        String status = (String)jsonObject.get("status");
-        System.out.println("status:"+ status);
+        while(true){
+            String result = HttpRequest.doPostForm(URL,personInfo);
+            JSONObject jsonObject = JSONObject.parseObject(result);
+            String status = (String)jsonObject.get("status");
+            System.out.println("status:"+ status);
 
-        String message = (String)jsonObject.get("message");
-        System.out.println("name:" + personInfo.get("name") + "  message:"+message);
+            String message = (String)jsonObject.get("message");
+            System.out.println("name:" + personInfo.get("name") + "  message:"+message);
             if(!"2".equals(status) || message.contains("预约成功")){
                 break;
             }
