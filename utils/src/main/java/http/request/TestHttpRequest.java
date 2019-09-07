@@ -13,7 +13,11 @@ import java.util.concurrent.TimeUnit;
  **/
 public class TestHttpRequest {
 
+
     public static final String URL_3 = "http://3.duotucms.com/index.php/index/order";
+    /**
+     * 下沙街道社区
+     */
     public static final String URL_6 = "http://6.duotucms.com/index.php/index/order";
     public static final HashMap<String,String> qttPersonMap = new HashMap<>();
     public static final HashMap<String,String> xukePersonMap = new HashMap<>();
