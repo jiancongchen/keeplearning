@@ -11,6 +11,7 @@
     <modules>
         <module>designpatterns</module>
         <module>utils</module>
+        <module>redis</module>
     </modules>
 
     <properties>
