@@ -1,6 +1,7 @@
 package http.request;
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang3.StringUtils;
 
 
 import java.util.HashMap;
@@ -52,6 +53,10 @@ public class TestHttpRequest {
     public void reservationApply(String URL,HashMap<String,String> personInfo) {
         while(true){
             String result = HttpRequest.doPostForm(URL,personInfo);
+            if(StringUtils.isEmpty(result)){
+                System.out.println("failed");
+                continue;
+            }
             JSONObject jsonObject = JSONObject.parseObject(result);
             String status = (String)jsonObject.get("status");
             System.out.println("status:"+ status);
