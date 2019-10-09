@@ -19,17 +19,17 @@ public class SelctionSort implements Sort{
     @Override
     public void sort(int[] arr){
         for(int i = 0; i < arr.length; i ++){
-            int min = arr[i];
-            int index = i;
+            int min = i;
             for(int j = i + 1; j < arr.length; j++){
-                if(arr[j] < min){
-                    min = arr[j];
-                    index = j;
+                if(arr[j] < arr[min]){
+                    min = j;
                 }
             }
-            arr[index] = arr[i];
-            arr[i] = min;
-
+            if(min != i){
+                int temp = arr[i];
+                arr[i] = arr[min];
+                arr[min] = temp;
+            }
             for(int k : arr){
                 System.out.print(k + " ");
             }

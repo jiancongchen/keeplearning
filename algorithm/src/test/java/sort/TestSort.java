@@ -10,8 +10,7 @@ public class TestSort {
     @Test
     public void runSort() {
         int[] arr = new int[]{12,23,45,7,87,33,94,26,88,34,76};
-//        Sort sort = new BubbleSort();
-        Sort sort = new SelctionSort();
+        Sort sort = new InsertionSort();
         sort.sort(arr);
     }
 }
