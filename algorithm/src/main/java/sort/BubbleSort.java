@@ -2,15 +2,18 @@ package sort;
 
 /**
  *
+ * 冒泡排序
  * 基本思想：两个数比较大小，较大的数下沉，较小的数冒起来。
  * 平均时间复杂度：O(n^2)
  *
  * 数据的顺序排好之后，冒泡算法仍然会继续进行下一轮的比较，直到arr.length-1次，后面的比较没有意义的。
+ *
  * @author : jiancongchen on 2019-10-09
  **/
-public class BubbleSort {
+public class BubbleSort implements Sort{
 
-    public static void sort(int [] arr){
+    @Override
+    public void sort(int[] arr){
 
         int temp;//临时变量
         boolean flag;//是否交换的标志
@@ -38,10 +41,5 @@ public class BubbleSort {
                 break;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        int[] arr = new int[]{12,23,45,7,87,33,94,26,88,34,76};
-        sort(arr);
     }
 }
