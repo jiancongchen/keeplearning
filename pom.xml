@@ -12,6 +12,7 @@
         <module>designpatterns</module>
         <module>utils</module>
         <module>redis</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
