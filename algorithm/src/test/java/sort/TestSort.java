@@ -10,7 +10,7 @@ public class TestSort {
     @Test
     public void runSort() {
         int[] arr = new int[]{12,23,45,7,87,33,94,26,88,34,76};
-        Sort sort = new HeapSort();
+        Sort sort = new RadixSort();
         sort.sort(arr);
     }
 }
