@@ -3,6 +3,13 @@ package sort;
 import java.util.Arrays;
 
 /**
+ * 基数排序
+ *
+ * 每次循环遍历数组将元素放在指定位置O(n)，在从桶中取出数据O(n)，循环d次（d是位数），
+ * 时间复杂度就是O((n+r)*d),r是基数，比如：10
+ *
+ * 参考：https://www.cnblogs.com/developerY/p/3172379.html
+ *
  * @author : jiancongchen on 2019/10/13
  */
 
