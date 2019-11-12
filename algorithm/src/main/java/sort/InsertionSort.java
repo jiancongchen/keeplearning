@@ -26,7 +26,7 @@ public class InsertionSort implements Sort{
                     arr[j-1] = arr[j];
                     arr[j] = temp;
                 }else{
-                    //不能交换说明找到合适的位置插入
+                    //不能交换，说明已经找到合适的位置插入
                     break;
                 }
             }

@@ -28,7 +28,7 @@ public class HeapSort implements Sort{
                 System.out.print(index + " ");
             }
             System.out.println();
-            //调整除了最大元素之外的位置
+            //调整除了最大元素之外的位置，最大的元素放在末尾
             adjustHead(arr,0,j);
         }
     }
@@ -42,6 +42,7 @@ public class HeapSort implements Sort{
      */
     public void adjustHead(int[] arr, int i,int length){
         int temp = arr[i];
+        //始终保证发生调整的节点是k，那么需要对K节点进行后续的调整
         for(int k = 2*i + 1; k < length; k = k*2 + 1){
             //判断右节点是否比左节点要大
            if(k + 1 < length && arr[k + 1] > arr[k]){
@@ -54,7 +55,6 @@ public class HeapSort implements Sort{
                break;
            }
            arr[i] = arr[k];
-           //发生调整的节点是k，
            i = k;
         }
         //寻找的是第i个元素最合适的位置

@@ -47,7 +47,7 @@ public class MergeSort implements Sort{
         while(p2 <= right){
             temp[k++] = a[p2++];
         }
-        //注意等号
+        //注意等号,把临时数组中排好序的部分，放回元原数组中
         for(int i = left; i <= right; i++){
             a[i] = temp[i];
         }

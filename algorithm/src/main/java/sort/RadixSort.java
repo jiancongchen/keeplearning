@@ -19,11 +19,11 @@ public class RadixSort implements Sort{
     public void sort(int[] arr) {
         int n = 100;
         int d = 1;
-        //二维数组存放，0-9，每一个存放对应的数字3，极端情况所有数字的个位一样
+        //二维数组存放，0-9，每一个存放对应的数字，极端情况所有数字的个位一样
         //所以需要arr.length
         int[][] bucket = new int[10][arr.length];
         //存放每个桶中有多少个数字，极端情况，在同一个桶
-        int[] count = new int[arr.length];
+        int[] count = new int[10];
 
         while(d < n){
             int k = 0;
