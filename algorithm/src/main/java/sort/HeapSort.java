@@ -7,6 +7,14 @@ package sort;
  *
  * 参考：https://www.cnblogs.com/chengxiao/p/6129630.html
  *
+ * 堆排序为啥最后一个非叶子节点是  arr.length/2 - 1 ？
+ * 参考：https://blog.csdn.net/weixin_30553065/article/details/99537126?utm_medium=distribute.pc_relevant.none-task-blog-title-4&spm=1001.2101.3001.4242
+ *
+ *  总共有n个节点，存放在数组中
+ * （1）堆的最后一个非叶子节点若只有左孩子  2i + 1 = n -1  ===> i = n/2 -1
+ * （2）堆的最后一个非叶子节点有左右两个孩子  2i + 1 = n - 2 ===> i = ((n - 2) - 1)/2  ===> ((n - 1) -2)/2  ===> (n - 1)/ 2 - 1
+ *  当堆有左右孩子的时候，n必定为奇数，程序中，向下取整，那么 (n - 1)/ 2 等价于 n / 2 -1
+ *
  * @author : jiancongchen on 2019/10/13
  */
 
