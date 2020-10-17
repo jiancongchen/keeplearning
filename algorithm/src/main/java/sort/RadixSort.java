@@ -17,12 +17,24 @@ public class RadixSort implements Sort{
 
     @Override
     public void sort(int[] arr) {
-        int n = 100;
+        // 找到最大的数，根据最大数据的位数作为循环的结束
+        int max = 0;
+        for (int i = 0; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        int n = 1;
+        for (int j = max; j > 0; j = j /10){
+            n = n * 10;
+        }
+
         int d = 1;
         //二维数组存放，0-9，每一个存放对应的数字，极端情况所有数字的个位一样
         //所以需要arr.length
         int[][] bucket = new int[10][arr.length];
-        //存放每个桶中有多少个数字，极端情况，在同一个桶
+        // 存放每个桶中有多少个数字，总共是10个桶
+        //（极端情况，在同一个桶）
         int[] count = new int[10];
 
         while(d < n){

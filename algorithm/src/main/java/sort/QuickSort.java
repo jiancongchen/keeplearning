@@ -7,6 +7,8 @@ package sort;
  * 基本思想：（分治）
  * 先从数列中取出一个数作为key值；
  * 将比这个数小的数全部放在它的左边，大于或等于它的数全部放在它的右边；
+ * 所以循环结束之后，就可以确定一个数在排序结果的准确位置
+ *
  * 对左右两个小数列重复第二步，直至各区间只有1个数。
  *
  * 平均算法复杂度：O(N*logN)
@@ -42,7 +44,7 @@ public class QuickSort implements Sort{
             }
             arr[high] = arr[low];
         }
-        //循环借宿之后，low=high，并且这个位置是最初确定的基数的位置
+        //循环结束之后，low=high，并且这个位置是最初确定的基数的位置
         arr[low] = tmp;
         for(int index : arr){
             System.out.print(index + " ");

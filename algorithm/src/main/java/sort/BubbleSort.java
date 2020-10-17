@@ -22,7 +22,8 @@ public class BubbleSort implements Sort{
         for(int i=0; i<arr.length-1; i++){
             // 每次遍历标志位都要先置为false，才能判断后面的元素是否发生了交换
             flag = false;
-            //选出该趟排序的最大值往后移动
+            //选出该趟排序的最大值往后移动，每一次排序都可以确认一个元素，
+            // 每次排序都可以减少一个元素的比较
             for(int j=arr.length-1; j>i; j--){
                 if(arr[j] < arr[j-1]){
                     temp = arr[j];
